@@ -1,0 +1,598 @@
+2025-03-17 09:32:21,517 - INFO - Created directory: config
+2025-03-17 09:32:21,517 - INFO - Starting email selection process...
+2025-03-17 09:32:21,789 - INFO - Aggregating up to 5 CSV files from emails...
+2025-03-17 09:32:21,789 - INFO - Processing 5 CSV files: ['emails_13.csv', 'emails_15.csv', 'emails_28.csv', 'emails_29.csv', 'emails_16.csv']
+2025-03-17 09:32:21,789 - INFO - Loading emails_13.csv...
+2025-03-17 09:32:21,789 - INFO - Loading dataset from emails/emails_13.csv...
+2025-03-17 09:32:21,909 - INFO - Dataset loaded successfully. Total emails: 10000
+2025-03-17 09:32:21,909 - INFO - Successfully loaded 10000 emails from emails_13.csv
+2025-03-17 09:32:21,909 - INFO - Loading emails_15.csv...
+2025-03-17 09:32:21,909 - INFO - Loading dataset from emails/emails_15.csv...
+2025-03-17 09:32:22,062 - INFO - Dataset loaded successfully. Total emails: 10000
+2025-03-17 09:32:22,062 - INFO - Successfully loaded 10000 emails from emails_15.csv
+2025-03-17 09:32:22,062 - INFO - Loading emails_28.csv...
+2025-03-17 09:32:22,062 - INFO - Loading dataset from emails/emails_28.csv...
+2025-03-17 09:32:22,206 - INFO - Dataset loaded successfully. Total emails: 10000
+2025-03-17 09:32:22,206 - INFO - Successfully loaded 10000 emails from emails_28.csv
+2025-03-17 09:32:22,206 - INFO - Loading emails_29.csv...
+2025-03-17 09:32:22,206 - INFO - Loading dataset from emails/emails_29.csv...
+2025-03-17 09:32:22,419 - INFO - Dataset loaded successfully. Total emails: 10000
+2025-03-17 09:32:22,420 - INFO - Successfully loaded 10000 emails from emails_29.csv
+2025-03-17 09:32:22,420 - INFO - Loading emails_16.csv...
+2025-03-17 09:32:22,420 - INFO - Loading dataset from emails/emails_16.csv...
+2025-03-17 09:32:22,647 - INFO - Dataset loaded successfully. Total emails: 10000
+2025-03-17 09:32:22,647 - INFO - Successfully loaded 10000 emails from emails_16.csv
+2025-03-17 09:32:22,648 - INFO - Combined dataset contains 50000 emails
+2025-03-17 09:32:22,861 - INFO - Dataset cleaned. Remaining emails: 50000
+2025-03-17 09:32:22,863 - INFO - Parsing email content components...
+2025-03-17 09:32:33,059 - INFO - Metadata extraction complete
+2025-03-17 09:32:33,064 - INFO - Identifying business emails...
+2025-03-17 09:32:37,167 - INFO - Found 10838 business emails
+2025-03-17 09:32:37,167 - INFO - Categorizing business emails...
+2025-03-17 09:32:40,214 - INFO - 
+Category distribution:
+2025-03-17 09:32:40,214 - INFO -   financial: 4362
+2025-03-17 09:32:40,214 - INFO -   legal: 2845
+2025-03-17 09:32:40,214 - INFO -   meeting: 2014
+2025-03-17 09:32:40,214 - INFO -   project: 972
+2025-03-17 09:32:40,214 - INFO -   transaction: 629
+2025-03-17 09:32:40,214 - INFO -   general: 16
+2025-03-17 09:32:40,226 - INFO - 
+Selected 100 emails
+2025-03-17 09:32:40,226 - INFO - Selected category distribution:
+2025-03-17 09:32:40,226 - INFO -   financial: 20
+2025-03-17 09:32:40,226 - INFO -   legal: 16
+2025-03-17 09:32:40,226 - INFO -   project: 16
+2025-03-17 09:32:40,226 - INFO -   meeting: 16
+2025-03-17 09:32:40,226 - INFO -   transaction: 16
+2025-03-17 09:32:40,226 - INFO -   general: 16
+2025-03-17 09:32:40,233 - INFO - Saved 100 emails to selected_emails/selected_enron_emails_20250317_093221.json
+2025-03-17 09:32:40,234 - INFO - Email selection complete. Selected 100 emails to selected_emails/selected_enron_emails_20250317_093221.json
+2025-03-17 09:32:40,243 - INFO - Pipeline execution complete
+2025-03-17 09:32:56,791 - INFO - Starting synthetic email generation process...
+2025-03-17 09:32:57,007 - ERROR - Error in email generation process: No module named 'dotenv'
+2025-03-17 09:32:57,007 - ERROR - Traceback (most recent call last):
+  File "/Users/kajalkumbhar/Documents/ConsilioAssignment/synthetic_email_pipeline.py", line 153, in run_email_generation
+    from email_generator import SyntheticEmailGenerator
+  File "/Users/kajalkumbhar/Documents/ConsilioAssignment/email_generator.py", line 9, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+
+2025-03-17 09:32:57,008 - INFO - Pipeline execution complete
+2025-03-17 09:33:20,484 - INFO - Starting synthetic email generation process...
+2025-03-17 09:33:20,641 - ERROR - Error in email generation process: cannot access local variable 'os' where it is not associated with a value
+2025-03-17 09:33:20,641 - ERROR - Traceback (most recent call last):
+  File "/Users/kajalkumbhar/Documents/ConsilioAssignment/synthetic_email_pipeline.py", line 157, in run_email_generation
+    selected_files = [f for f in os.listdir('selected_emails') if f.endswith('.json')]
+                                 ^^
+UnboundLocalError: cannot access local variable 'os' where it is not associated with a value
+
+2025-03-17 09:33:20,641 - INFO - Pipeline execution complete
+2025-03-17 09:36:27,217 - INFO - Starting synthetic email generation process...
+2025-03-17 09:36:27,561 - ERROR - Error in email generation process: cannot access local variable 'os' where it is not associated with a value
+2025-03-17 09:36:27,561 - ERROR - Traceback (most recent call last):
+  File "/Users/kajalkumbhar/Documents/ConsilioAssignment/synthetic_email_pipeline.py", line 157, in run_email_generation
+    selected_files = [f for f in os.listdir('selected_emails') if f.endswith('.json')]
+                                 ^^
+UnboundLocalError: cannot access local variable 'os' where it is not associated with a value
+
+2025-03-17 09:36:27,561 - INFO - Pipeline execution complete
+2025-03-17 09:38:18,802 - INFO - Starting synthetic email generation process...
+2025-03-17 09:38:19,061 - ERROR - Error in email generation process: cannot access local variable 'os' where it is not associated with a value
+2025-03-17 09:38:19,061 - ERROR - Traceback (most recent call last):
+  File "/Users/kajalkumbhar/Documents/ConsilioAssignment/synthetic_email_pipeline.py", line 160, in run_email_generation
+    selected_files = [f for f in os.listdir('selected_emails') if f.endswith('.json')]
+                                 ^^
+UnboundLocalError: cannot access local variable 'os' where it is not associated with a value
+
+2025-03-17 09:38:19,061 - INFO - Pipeline execution complete
+2025-03-17 09:39:01,037 - INFO - Starting synthetic email generation process...
+2025-03-17 09:39:01,195 - INFO - Using selected emails from: selected_emails/selected_enron_emails_20250317_093221.json
+2025-03-17 09:39:01,198 - INFO - Loaded 100 emails from selected_emails/selected_enron_emails_20250317_093221.json
+2025-03-17 09:39:01,198 - INFO - Limiting to 50 emails for processing
+2025-03-17 09:39:01,569 - INFO - OpenAI API key configured
+2025-03-17 09:39:01,569 - INFO - Initialized new entity mappings
+2025-03-17 09:39:01,570 - INFO - 
+Transforming email 1/50
+2025-03-17 09:39:01,570 - INFO - Transforming financial email to Indian finance domain
+2025-03-17 09:39:22,165 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:39:22,177 - INFO - 
+Transforming email 2/50
+2025-03-17 09:39:22,177 - INFO - Transforming financial email to Indian technology domain
+2025-03-17 09:39:22,614 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-03-17 09:39:22,616 - ERROR - Error calling OpenAI API: Error code: 400 - {'error': {'message': "This model's maximum context length is 8192 tokens. However, you requested 9114 tokens (7614 in the messages, 1500 in the completion). Please reduce the length of the messages or completion.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+2025-03-17 09:39:22,617 - INFO - Falling back to simple rule-based transformation
+2025-03-17 09:39:22,693 - INFO - 
+Transforming email 3/50
+2025-03-17 09:39:22,693 - INFO - Transforming financial email to Indian finance domain
+2025-03-17 09:39:56,962 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:39:56,966 - INFO - 
+Transforming email 4/50
+2025-03-17 09:39:56,966 - INFO - Transforming financial email to Indian technology domain
+2025-03-17 09:40:40,114 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:40:40,119 - INFO - 
+Transforming email 5/50
+2025-03-17 09:40:40,119 - INFO - Transforming financial email to Indian finance domain
+2025-03-17 09:40:59,971 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:40:59,978 - INFO - Saved 5 transformed emails to synthetic_emails/indian_synthetic_emails_20250317_093901.json
+2025-03-17 09:40:59,979 - INFO - Saved entity mappings to synthetic_emails/indian_synthetic_emails_20250317_093901_mappings.json
+2025-03-17 09:40:59,980 - INFO - 
+Transforming email 6/50
+2025-03-17 09:40:59,980 - INFO - Transforming financial email to Indian technology domain
+2025-03-17 09:41:46,660 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:41:46,664 - INFO - 
+Transforming email 7/50
+2025-03-17 09:41:46,665 - INFO - Transforming financial email to Indian technology domain
+2025-03-17 09:41:47,157 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-03-17 09:41:47,159 - ERROR - Error calling OpenAI API: Error code: 400 - {'error': {'message': "This model's maximum context length is 8192 tokens. However, your messages resulted in 9044 tokens. Please reduce the length of the messages.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+2025-03-17 09:41:47,159 - INFO - Falling back to simple rule-based transformation
+2025-03-17 09:41:47,247 - INFO - 
+Transforming email 8/50
+2025-03-17 09:41:47,247 - INFO - Transforming financial email to Indian finance domain
+2025-03-17 09:41:47,719 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-03-17 09:41:47,721 - ERROR - Error calling OpenAI API: Error code: 400 - {'error': {'message': "This model's maximum context length is 8192 tokens. However, your messages resulted in 10368 tokens. Please reduce the length of the messages.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+2025-03-17 09:41:47,721 - INFO - Falling back to simple rule-based transformation
+2025-03-17 09:41:47,827 - INFO - 
+Transforming email 9/50
+2025-03-17 09:41:47,827 - INFO - Transforming financial email to Indian technology domain
+2025-03-17 09:42:44,197 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:42:44,205 - INFO - 
+Transforming email 10/50
+2025-03-17 09:42:44,206 - INFO - Transforming financial email to Indian technology domain
+2025-03-17 09:43:02,948 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:43:02,970 - INFO - Saved 10 transformed emails to synthetic_emails/indian_synthetic_emails_20250317_093901.json
+2025-03-17 09:43:02,972 - INFO - Saved entity mappings to synthetic_emails/indian_synthetic_emails_20250317_093901_mappings.json
+2025-03-17 09:43:02,972 - INFO - 
+Transforming email 11/50
+2025-03-17 09:43:02,973 - INFO - Transforming financial email to Indian finance domain
+2025-03-17 09:43:25,348 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:43:25,353 - INFO - 
+Transforming email 12/50
+2025-03-17 09:43:25,354 - INFO - Transforming financial email to Indian finance domain
+2025-03-17 09:43:43,569 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:43:43,574 - INFO - 
+Transforming email 13/50
+2025-03-17 09:43:43,574 - INFO - Transforming financial email to Indian technology domain
+2025-03-17 09:44:08,412 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:44:08,419 - INFO - 
+Transforming email 14/50
+2025-03-17 09:44:08,420 - INFO - Transforming financial email to Indian finance domain
+2025-03-17 09:44:27,414 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:44:27,480 - INFO - 
+Transforming email 15/50
+2025-03-17 09:44:27,480 - INFO - Transforming financial email to Indian technology domain
+2025-03-17 09:44:56,261 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:44:56,275 - INFO - Saved 15 transformed emails to synthetic_emails/indian_synthetic_emails_20250317_093901.json
+2025-03-17 09:44:56,278 - INFO - Saved entity mappings to synthetic_emails/indian_synthetic_emails_20250317_093901_mappings.json
+2025-03-17 09:44:56,278 - INFO - 
+Transforming email 16/50
+2025-03-17 09:44:56,278 - INFO - Transforming financial email to Indian finance domain
+2025-03-17 09:45:22,344 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:45:22,349 - INFO - 
+Transforming email 17/50
+2025-03-17 09:45:22,349 - INFO - Transforming financial email to Indian finance domain
+2025-03-17 09:45:44,047 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:45:44,051 - INFO - 
+Transforming email 18/50
+2025-03-17 09:45:44,052 - INFO - Transforming financial email to Indian technology domain
+2025-03-17 09:45:52,847 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:45:52,850 - INFO - 
+Transforming email 19/50
+2025-03-17 09:45:52,851 - INFO - Transforming financial email to Indian technology domain
+2025-03-17 09:46:25,997 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:46:26,010 - INFO - 
+Transforming email 20/50
+2025-03-17 09:46:26,010 - INFO - Transforming financial email to Indian finance domain
+2025-03-17 09:46:58,182 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:46:58,190 - INFO - Saved 20 transformed emails to synthetic_emails/indian_synthetic_emails_20250317_093901.json
+2025-03-17 09:46:58,193 - INFO - Saved entity mappings to synthetic_emails/indian_synthetic_emails_20250317_093901_mappings.json
+2025-03-17 09:46:58,193 - INFO - 
+Transforming email 21/50
+2025-03-17 09:46:58,193 - INFO - Transforming legal email to Indian healthcare domain
+2025-03-17 09:47:14,808 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:47:14,814 - INFO - 
+Transforming email 22/50
+2025-03-17 09:47:14,817 - INFO - Transforming legal email to Indian finance domain
+2025-03-17 09:47:15,824 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-03-17 09:47:15,826 - ERROR - Error calling OpenAI API: Error code: 400 - {'error': {'message': "This model's maximum context length is 8192 tokens. However, your messages resulted in 21533 tokens. Please reduce the length of the messages.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+2025-03-17 09:47:15,826 - INFO - Falling back to simple rule-based transformation
+2025-03-17 09:47:16,005 - INFO - 
+Transforming email 23/50
+2025-03-17 09:47:16,006 - INFO - Transforming legal email to Indian healthcare domain
+2025-03-17 09:47:16,572 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-03-17 09:47:16,572 - ERROR - Error calling OpenAI API: Error code: 400 - {'error': {'message': "This model's maximum context length is 8192 tokens. However, your messages resulted in 9764 tokens. Please reduce the length of the messages.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+2025-03-17 09:47:16,572 - INFO - Falling back to simple rule-based transformation
+2025-03-17 09:47:16,625 - INFO - 
+Transforming email 24/50
+2025-03-17 09:47:16,625 - INFO - Transforming legal email to Indian finance domain
+2025-03-17 09:48:01,916 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:48:01,925 - INFO - 
+Transforming email 25/50
+2025-03-17 09:48:01,926 - INFO - Transforming legal email to Indian healthcare domain
+2025-03-17 09:48:38,430 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:48:38,439 - INFO - Saved 25 transformed emails to synthetic_emails/indian_synthetic_emails_20250317_093901.json
+2025-03-17 09:48:38,442 - INFO - Saved entity mappings to synthetic_emails/indian_synthetic_emails_20250317_093901_mappings.json
+2025-03-17 09:48:38,443 - INFO - 
+Transforming email 26/50
+2025-03-17 09:48:38,443 - INFO - Transforming legal email to Indian finance domain
+2025-03-17 09:49:12,613 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:49:12,620 - INFO - 
+Transforming email 27/50
+2025-03-17 09:49:12,621 - INFO - Transforming legal email to Indian finance domain
+2025-03-17 09:49:49,174 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:49:49,190 - INFO - 
+Transforming email 28/50
+2025-03-17 09:49:49,190 - INFO - Transforming legal email to Indian technology domain
+2025-03-17 09:50:34,867 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:50:34,883 - INFO - 
+Transforming email 29/50
+2025-03-17 09:50:34,884 - INFO - Transforming legal email to Indian finance domain
+2025-03-17 09:51:00,709 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:51:00,714 - INFO - 
+Transforming email 30/50
+2025-03-17 09:51:00,714 - INFO - Transforming legal email to Indian technology domain
+2025-03-17 09:51:19,485 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:51:19,494 - INFO - Saved 30 transformed emails to synthetic_emails/indian_synthetic_emails_20250317_093901.json
+2025-03-17 09:51:19,497 - INFO - Saved entity mappings to synthetic_emails/indian_synthetic_emails_20250317_093901_mappings.json
+2025-03-17 09:51:19,498 - INFO - 
+Transforming email 31/50
+2025-03-17 09:51:19,498 - INFO - Transforming legal email to Indian finance domain
+2025-03-17 09:51:53,892 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:51:53,899 - INFO - 
+Transforming email 32/50
+2025-03-17 09:51:53,899 - INFO - Transforming legal email to Indian finance domain
+2025-03-17 09:52:35,342 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:52:35,347 - INFO - 
+Transforming email 33/50
+2025-03-17 09:52:35,347 - INFO - Transforming legal email to Indian finance domain
+2025-03-17 09:52:52,091 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:52:52,096 - INFO - 
+Transforming email 34/50
+2025-03-17 09:52:52,097 - INFO - Transforming legal email to Indian finance domain
+2025-03-17 09:53:39,613 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:53:39,625 - INFO - 
+Transforming email 35/50
+2025-03-17 09:53:39,625 - INFO - Transforming legal email to Indian technology domain
+2025-03-17 09:53:51,768 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:53:51,776 - INFO - Saved 35 transformed emails to synthetic_emails/indian_synthetic_emails_20250317_093901.json
+2025-03-17 09:53:51,781 - INFO - Saved entity mappings to synthetic_emails/indian_synthetic_emails_20250317_093901_mappings.json
+2025-03-17 09:53:51,781 - INFO - 
+Transforming email 36/50
+2025-03-17 09:53:51,781 - INFO - Transforming legal email to Indian finance domain
+2025-03-17 09:54:30,599 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:54:30,604 - INFO - 
+Transforming email 37/50
+2025-03-17 09:54:30,604 - INFO - Transforming project email to Indian agriculture domain
+2025-03-17 09:54:45,306 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:54:45,322 - INFO - 
+Transforming email 38/50
+2025-03-17 09:54:45,323 - INFO - Transforming project email to Indian technology domain
+2025-03-17 09:55:24,838 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:55:24,851 - INFO - 
+Transforming email 39/50
+2025-03-17 09:55:24,851 - INFO - Transforming project email to Indian agriculture domain
+2025-03-17 09:55:39,814 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:55:39,822 - INFO - 
+Transforming email 40/50
+2025-03-17 09:55:39,822 - INFO - Transforming project email to Indian agriculture domain
+2025-03-17 09:55:58,485 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:55:58,516 - INFO - Saved 40 transformed emails to synthetic_emails/indian_synthetic_emails_20250317_093901.json
+2025-03-17 09:55:58,519 - INFO - Saved entity mappings to synthetic_emails/indian_synthetic_emails_20250317_093901_mappings.json
+2025-03-17 09:55:58,519 - INFO - 
+Transforming email 41/50
+2025-03-17 09:55:58,519 - INFO - Transforming project email to Indian technology domain
+2025-03-17 09:56:41,167 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:56:41,210 - INFO - 
+Transforming email 42/50
+2025-03-17 09:56:41,211 - INFO - Transforming project email to Indian technology domain
+2025-03-17 09:57:03,584 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:57:03,589 - INFO - 
+Transforming email 43/50
+2025-03-17 09:57:03,589 - INFO - Transforming project email to Indian agriculture domain
+2025-03-17 09:57:29,839 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:57:29,847 - INFO - 
+Transforming email 44/50
+2025-03-17 09:57:29,847 - INFO - Transforming project email to Indian technology domain
+2025-03-17 09:58:06,855 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:58:06,866 - INFO - 
+Transforming email 45/50
+2025-03-17 09:58:06,866 - INFO - Transforming project email to Indian agriculture domain
+2025-03-17 09:58:31,714 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:58:31,724 - INFO - Saved 45 transformed emails to synthetic_emails/indian_synthetic_emails_20250317_093901.json
+2025-03-17 09:58:31,728 - INFO - Saved entity mappings to synthetic_emails/indian_synthetic_emails_20250317_093901_mappings.json
+2025-03-17 09:58:31,728 - INFO - 
+Transforming email 46/50
+2025-03-17 09:58:31,728 - INFO - Transforming project email to Indian technology domain
+2025-03-17 09:59:14,460 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 09:59:14,479 - INFO - 
+Transforming email 47/50
+2025-03-17 09:59:14,480 - INFO - Transforming project email to Indian education domain
+2025-03-17 10:00:03,246 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:00:03,294 - INFO - 
+Transforming email 48/50
+2025-03-17 10:00:03,295 - INFO - Transforming project email to Indian education domain
+2025-03-17 10:00:24,147 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:00:24,152 - INFO - 
+Transforming email 49/50
+2025-03-17 10:00:24,152 - INFO - Transforming project email to Indian education domain
+2025-03-17 10:00:42,605 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:00:42,619 - INFO - 
+Transforming email 50/50
+2025-03-17 10:00:42,619 - INFO - Transforming project email to Indian technology domain
+2025-03-17 10:01:16,025 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:01:16,039 - INFO - Saved 50 transformed emails to synthetic_emails/indian_synthetic_emails_20250317_093901.json
+2025-03-17 10:01:16,044 - INFO - Saved entity mappings to synthetic_emails/indian_synthetic_emails_20250317_093901_mappings.json
+2025-03-17 10:01:16,044 - INFO - Email generation complete. Generated 50 emails to synthetic_emails/indian_synthetic_emails_20250317_093901.json
+2025-03-17 10:01:16,045 - INFO - Pipeline execution complete
+2025-03-17 10:03:56,459 - INFO - Starting synthetic email evaluation process...
+2025-03-17 10:03:57,603 - INFO - Loaded 50 original emails and 50 synthetic emails
+2025-03-17 10:03:57,646 - INFO - De-identification score: 1.00
+2025-03-17 10:03:57,648 - INFO - Indian context score: 1.00
+2025-03-17 10:03:57,648 - INFO - Domain distribution:
+2025-03-17 10:03:57,648 - INFO -   finance: 20 (0.40)
+2025-03-17 10:03:57,648 - INFO -   technology: 19 (0.38)
+2025-03-17 10:03:57,648 - INFO -   healthcare: 3 (0.06)
+2025-03-17 10:03:57,648 - INFO -   agriculture: 5 (0.10)
+2025-03-17 10:03:57,648 - INFO -   education: 3 (0.06)
+2025-03-17 10:03:57,651 - INFO - Structure score: 0.75
+2025-03-17 10:03:57,651 - INFO - Overall score: 0.92
+2025-03-17 10:03:57,651 - INFO - 
+Evaluation complete!
+2025-03-17 10:03:57,651 - INFO - De-identification score: 1.00
+2025-03-17 10:03:57,651 - INFO - Indian context score: 1.00
+2025-03-17 10:03:57,651 - INFO - Pipeline execution complete
+2025-03-17 10:25:48,214 - INFO - Starting synthetic email generation process...
+2025-03-17 10:25:48,497 - INFO - Using selected emails from: selected_emails/selected_enron_emails_20250317_093221.json
+2025-03-17 10:25:48,500 - INFO - Loaded 100 emails from selected_emails/selected_enron_emails_20250317_093221.json
+2025-03-17 10:25:48,500 - INFO - Limiting to 50 emails for processing
+2025-03-17 10:25:48,797 - INFO - OpenAI API key configured
+2025-03-17 10:25:48,797 - INFO - Initialized new entity mappings
+2025-03-17 10:25:48,797 - INFO - 
+Transforming email 1/50
+2025-03-17 10:25:48,797 - INFO - Transforming financial email to Indian finance domain
+2025-03-17 10:26:07,555 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:26:07,566 - INFO - 
+Transforming email 2/50
+2025-03-17 10:26:07,567 - INFO - Transforming financial email to Indian technology domain
+2025-03-17 10:26:08,214 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-03-17 10:26:08,217 - ERROR - Error calling OpenAI API: Error code: 400 - {'error': {'message': "This model's maximum context length is 8192 tokens. However, you requested 9049 tokens (7549 in the messages, 1500 in the completion). Please reduce the length of the messages or completion.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+2025-03-17 10:26:08,217 - INFO - Falling back to simple rule-based transformation
+2025-03-17 10:26:08,303 - INFO - 
+Transforming email 3/50
+2025-03-17 10:26:08,303 - INFO - Transforming financial email to Indian finance domain
+2025-03-17 10:26:31,210 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:26:31,214 - INFO - 
+Transforming email 4/50
+2025-03-17 10:26:31,214 - INFO - Transforming financial email to Indian finance domain
+2025-03-17 10:27:00,019 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:27:00,022 - INFO - 
+Transforming email 5/50
+2025-03-17 10:27:00,023 - INFO - Transforming financial email to Indian technology domain
+2025-03-17 10:27:17,793 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:27:17,803 - INFO - Saved 5 transformed emails to synthetic_emails/indian_synthetic_emails_20250317_102548.json
+2025-03-17 10:27:17,804 - INFO - Saved entity mappings to synthetic_emails/indian_synthetic_emails_20250317_102548_mappings.json
+2025-03-17 10:27:17,805 - INFO - 
+Transforming email 6/50
+2025-03-17 10:27:17,805 - INFO - Transforming financial email to Indian finance domain
+2025-03-17 10:28:00,388 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:28:00,392 - INFO - 
+Transforming email 7/50
+2025-03-17 10:28:00,393 - INFO - Transforming financial email to Indian finance domain
+2025-03-17 10:28:00,856 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-03-17 10:28:00,858 - ERROR - Error calling OpenAI API: Error code: 400 - {'error': {'message': "This model's maximum context length is 8192 tokens. However, your messages resulted in 9048 tokens. Please reduce the length of the messages.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+2025-03-17 10:28:00,858 - INFO - Falling back to simple rule-based transformation
+2025-03-17 10:28:00,962 - INFO - 
+Transforming email 8/50
+2025-03-17 10:28:00,963 - INFO - Transforming financial email to Indian finance domain
+2025-03-17 10:28:01,367 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-03-17 10:28:01,369 - ERROR - Error calling OpenAI API: Error code: 400 - {'error': {'message': "This model's maximum context length is 8192 tokens. However, your messages resulted in 10279 tokens. Please reduce the length of the messages.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+2025-03-17 10:28:01,369 - INFO - Falling back to simple rule-based transformation
+2025-03-17 10:28:01,479 - INFO - 
+Transforming email 9/50
+2025-03-17 10:28:01,480 - INFO - Transforming financial email to Indian finance domain
+2025-03-17 10:28:48,760 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:28:48,769 - INFO - 
+Transforming email 10/50
+2025-03-17 10:28:48,770 - INFO - Transforming financial email to Indian finance domain
+2025-03-17 10:29:05,465 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:29:05,474 - INFO - Saved 10 transformed emails to synthetic_emails/indian_synthetic_emails_20250317_102548.json
+2025-03-17 10:29:05,477 - INFO - Saved entity mappings to synthetic_emails/indian_synthetic_emails_20250317_102548_mappings.json
+2025-03-17 10:29:05,478 - INFO - 
+Transforming email 11/50
+2025-03-17 10:29:05,478 - INFO - Transforming financial email to Indian finance domain
+2025-03-17 10:29:21,631 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:29:21,636 - INFO - 
+Transforming email 12/50
+2025-03-17 10:29:21,636 - INFO - Transforming financial email to Indian finance domain
+2025-03-17 10:29:38,450 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:29:38,454 - INFO - 
+Transforming email 13/50
+2025-03-17 10:29:38,455 - INFO - Transforming financial email to Indian finance domain
+2025-03-17 10:30:04,497 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:30:04,502 - INFO - 
+Transforming email 14/50
+2025-03-17 10:30:04,503 - INFO - Transforming financial email to Indian finance domain
+2025-03-17 10:30:26,132 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:30:26,143 - INFO - 
+Transforming email 15/50
+2025-03-17 10:30:26,143 - INFO - Transforming financial email to Indian finance domain
+2025-03-17 10:30:59,080 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:30:59,094 - INFO - Saved 15 transformed emails to synthetic_emails/indian_synthetic_emails_20250317_102548.json
+2025-03-17 10:30:59,098 - INFO - Saved entity mappings to synthetic_emails/indian_synthetic_emails_20250317_102548_mappings.json
+2025-03-17 10:30:59,098 - INFO - 
+Transforming email 16/50
+2025-03-17 10:30:59,098 - INFO - Transforming financial email to Indian finance domain
+2025-03-17 10:31:25,579 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:31:25,582 - INFO - 
+Transforming email 17/50
+2025-03-17 10:31:25,583 - INFO - Transforming financial email to Indian finance domain
+2025-03-17 10:31:42,971 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:31:42,976 - INFO - 
+Transforming email 18/50
+2025-03-17 10:31:42,976 - INFO - Transforming financial email to Indian finance domain
+2025-03-17 10:31:51,677 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:31:51,692 - INFO - 
+Transforming email 19/50
+2025-03-17 10:31:51,693 - INFO - Transforming financial email to Indian finance domain
+2025-03-17 10:32:19,684 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:32:19,689 - INFO - 
+Transforming email 20/50
+2025-03-17 10:32:19,690 - INFO - Transforming financial email to Indian technology domain
+2025-03-17 10:32:52,122 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:32:52,133 - INFO - Saved 20 transformed emails to synthetic_emails/indian_synthetic_emails_20250317_102548.json
+2025-03-17 10:32:52,136 - INFO - Saved entity mappings to synthetic_emails/indian_synthetic_emails_20250317_102548_mappings.json
+2025-03-17 10:32:52,136 - INFO - 
+Transforming email 21/50
+2025-03-17 10:32:52,136 - INFO - Transforming legal email to Indian healthcare domain
+2025-03-17 10:33:07,813 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:33:07,824 - INFO - 
+Transforming email 22/50
+2025-03-17 10:33:07,829 - INFO - Transforming legal email to Indian healthcare domain
+2025-03-17 10:33:08,453 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-03-17 10:33:08,455 - ERROR - Error calling OpenAI API: Error code: 400 - {'error': {'message': "This model's maximum context length is 8192 tokens. However, your messages resulted in 21540 tokens. Please reduce the length of the messages.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+2025-03-17 10:33:08,455 - INFO - Falling back to simple rule-based transformation
+2025-03-17 10:33:08,646 - INFO - 
+Transforming email 23/50
+2025-03-17 10:33:08,647 - INFO - Transforming legal email to Indian healthcare domain
+2025-03-17 10:33:09,130 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-03-17 10:33:09,131 - ERROR - Error calling OpenAI API: Error code: 400 - {'error': {'message': "This model's maximum context length is 8192 tokens. However, your messages resulted in 9752 tokens. Please reduce the length of the messages.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+2025-03-17 10:33:09,131 - INFO - Falling back to simple rule-based transformation
+2025-03-17 10:33:09,224 - INFO - 
+Transforming email 24/50
+2025-03-17 10:33:09,224 - INFO - Transforming legal email to Indian technology domain
+2025-03-17 10:33:57,672 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:33:57,678 - INFO - 
+Transforming email 25/50
+2025-03-17 10:33:57,678 - INFO - Transforming legal email to Indian finance domain
+2025-03-17 10:34:32,656 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:34:32,668 - INFO - Saved 25 transformed emails to synthetic_emails/indian_synthetic_emails_20250317_102548.json
+2025-03-17 10:34:32,672 - INFO - Saved entity mappings to synthetic_emails/indian_synthetic_emails_20250317_102548_mappings.json
+2025-03-17 10:34:32,672 - INFO - 
+Transforming email 26/50
+2025-03-17 10:34:32,673 - INFO - Transforming legal email to Indian healthcare domain
+2025-03-17 10:35:06,911 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:35:06,918 - INFO - 
+Transforming email 27/50
+2025-03-17 10:35:06,918 - INFO - Transforming legal email to Indian healthcare domain
+2025-03-17 10:35:46,462 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:35:46,484 - INFO - 
+Transforming email 28/50
+2025-03-17 10:35:46,485 - INFO - Transforming legal email to Indian technology domain
+2025-03-17 10:36:35,996 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:36:36,019 - INFO - 
+Transforming email 29/50
+2025-03-17 10:36:36,020 - INFO - Transforming legal email to Indian finance domain
+2025-03-17 10:37:04,202 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:37:04,206 - INFO - 
+Transforming email 30/50
+2025-03-17 10:37:04,207 - INFO - Transforming legal email to Indian technology domain
+2025-03-17 10:37:22,323 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:37:22,330 - INFO - Saved 30 transformed emails to synthetic_emails/indian_synthetic_emails_20250317_102548.json
+2025-03-17 10:37:22,334 - INFO - Saved entity mappings to synthetic_emails/indian_synthetic_emails_20250317_102548_mappings.json
+2025-03-17 10:37:22,334 - INFO - 
+Transforming email 31/50
+2025-03-17 10:37:22,334 - INFO - Transforming legal email to Indian finance domain
+2025-03-17 10:37:59,985 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:37:59,994 - INFO - 
+Transforming email 32/50
+2025-03-17 10:37:59,995 - INFO - Transforming legal email to Indian healthcare domain
+2025-03-17 10:38:46,985 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:38:46,991 - INFO - 
+Transforming email 33/50
+2025-03-17 10:38:46,991 - INFO - Transforming legal email to Indian finance domain
+2025-03-17 10:39:09,110 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:39:09,119 - INFO - 
+Transforming email 34/50
+2025-03-17 10:39:09,120 - INFO - Transforming legal email to Indian finance domain
+2025-03-17 10:39:59,119 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:39:59,136 - INFO - 
+Transforming email 35/50
+2025-03-17 10:39:59,137 - INFO - Transforming legal email to Indian finance domain
+2025-03-17 10:40:13,029 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:40:13,045 - INFO - Saved 35 transformed emails to synthetic_emails/indian_synthetic_emails_20250317_102548.json
+2025-03-17 10:40:13,050 - INFO - Saved entity mappings to synthetic_emails/indian_synthetic_emails_20250317_102548_mappings.json
+2025-03-17 10:40:13,050 - INFO - 
+Transforming email 36/50
+2025-03-17 10:40:13,051 - INFO - Transforming legal email to Indian technology domain
+2025-03-17 10:41:02,740 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:41:02,747 - INFO - 
+Transforming email 37/50
+2025-03-17 10:41:02,748 - INFO - Transforming project email to Indian technology domain
+2025-03-17 10:41:20,251 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:41:20,255 - INFO - 
+Transforming email 38/50
+2025-03-17 10:41:20,255 - INFO - Transforming project email to Indian technology domain
+2025-03-17 10:41:57,081 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:41:57,092 - INFO - 
+Transforming email 39/50
+2025-03-17 10:41:57,092 - INFO - Transforming project email to Indian technology domain
+2025-03-17 10:42:13,442 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:42:13,453 - INFO - 
+Transforming email 40/50
+2025-03-17 10:42:13,453 - INFO - Transforming project email to Indian technology domain
+2025-03-17 10:42:36,075 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:42:36,091 - INFO - Saved 40 transformed emails to synthetic_emails/indian_synthetic_emails_20250317_102548.json
+2025-03-17 10:42:36,096 - INFO - Saved entity mappings to synthetic_emails/indian_synthetic_emails_20250317_102548_mappings.json
+2025-03-17 10:42:36,096 - INFO - 
+Transforming email 41/50
+2025-03-17 10:42:36,097 - INFO - Transforming project email to Indian technology domain
+2025-03-17 10:43:14,177 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:43:14,189 - INFO - 
+Transforming email 42/50
+2025-03-17 10:43:14,189 - INFO - Transforming project email to Indian technology domain
+2025-03-17 10:43:39,899 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:43:39,905 - INFO - 
+Transforming email 43/50
+2025-03-17 10:43:39,905 - INFO - Transforming project email to Indian education domain
+2025-03-17 10:44:07,197 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:44:07,201 - INFO - 
+Transforming email 44/50
+2025-03-17 10:44:07,202 - INFO - Transforming project email to Indian agriculture domain
+2025-03-17 10:44:47,834 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:44:47,841 - INFO - 
+Transforming email 45/50
+2025-03-17 10:44:47,841 - INFO - Transforming project email to Indian agriculture domain
+2025-03-17 10:45:10,945 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:45:10,961 - INFO - Saved 45 transformed emails to synthetic_emails/indian_synthetic_emails_20250317_102548.json
+2025-03-17 10:45:10,967 - INFO - Saved entity mappings to synthetic_emails/indian_synthetic_emails_20250317_102548_mappings.json
+2025-03-17 10:45:10,967 - INFO - 
+Transforming email 46/50
+2025-03-17 10:45:10,967 - INFO - Transforming project email to Indian technology domain
+2025-03-17 10:45:56,714 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:45:56,742 - INFO - 
+Transforming email 47/50
+2025-03-17 10:45:56,743 - INFO - Transforming project email to Indian technology domain
+2025-03-17 10:46:49,626 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:46:49,635 - INFO - 
+Transforming email 48/50
+2025-03-17 10:46:49,636 - INFO - Transforming project email to Indian education domain
+2025-03-17 10:47:09,844 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:47:09,849 - INFO - 
+Transforming email 49/50
+2025-03-17 10:47:09,849 - INFO - Transforming project email to Indian technology domain
+2025-03-17 10:47:27,848 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:47:27,857 - INFO - 
+Transforming email 50/50
+2025-03-17 10:47:27,858 - INFO - Transforming project email to Indian agriculture domain
+2025-03-17 10:48:00,345 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 10:48:00,358 - INFO - Saved 50 transformed emails to synthetic_emails/indian_synthetic_emails_20250317_102548.json
+2025-03-17 10:48:00,365 - INFO - Saved entity mappings to synthetic_emails/indian_synthetic_emails_20250317_102548_mappings.json
+2025-03-17 10:48:00,365 - INFO - Email generation complete. Generated 50 emails to synthetic_emails/indian_synthetic_emails_20250317_102548.json
+2025-03-17 10:48:00,367 - INFO - Pipeline execution complete
+2025-03-17 10:56:49,202 - INFO - Starting synthetic email evaluation process...
+2025-03-17 10:56:50,445 - INFO - Loaded 50 original emails and 50 synthetic emails
+2025-03-17 10:56:50,489 - INFO - De-identification score: 1.00
+2025-03-17 10:56:50,491 - INFO - Indian context score: 1.00
+2025-03-17 10:56:50,491 - INFO - Domain distribution:
+2025-03-17 10:56:50,491 - INFO -   finance: 23 (0.46)
+2025-03-17 10:56:50,491 - INFO -   technology: 16 (0.32)
+2025-03-17 10:56:50,491 - INFO -   healthcare: 6 (0.12)
+2025-03-17 10:56:50,491 - INFO -   education: 2 (0.04)
+2025-03-17 10:56:50,491 - INFO -   agriculture: 3 (0.06)
+2025-03-17 10:56:50,494 - INFO - Structure score: 0.81
+2025-03-17 10:56:50,494 - INFO - Overall score: 0.94
+2025-03-17 10:56:50,494 - INFO - 
+Evaluation complete!
+2025-03-17 10:56:50,494 - INFO - De-identification score: 1.00
+2025-03-17 10:56:50,494 - INFO - Indian context score: 1.00
+2025-03-17 10:56:50,494 - INFO - Pipeline execution complete
