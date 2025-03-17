@@ -1,0 +1,6 @@
+{
+    "openai_api_key": "your_api_key_here",
+    "log_level": "INFO",
+    "max_emails": 50,
+    "sample_size": 100
+}
