@@ -125,9 +125,13 @@ def identify_entities(self, text):
     identified_entities['emails'] = list(set(re.findall(email_pattern, text)))
     
     # Additional entity extraction logic...
+```
 
-Unified Entity Processing
+### Unified Entity Processing
+
 To ensure consistency, we implemented a unified entity processing approach:
+
+```python
 def transform_email(self, email_data):
     """
     Transform an Enron email into a synthetic email with Indian context
@@ -192,9 +196,13 @@ def transform_email(self, email_data):
                                 
                                 # Update the entity mapping for this person
                                 entity_mappings['people'][person] = consistent_name
+```
 
-LLM Integration
+### LLM Integration
+
 The system integrates with the OpenAI API using carefully crafted prompts:
+
+```python
 def transform_with_openai(self, original_email, target_domain, entity_mappings):
     """
     Transform email using OpenAI API
@@ -222,9 +230,15 @@ def transform_with_openai(self, original_email, target_domain, entity_mappings):
     """
     
     # OpenAI API call and error handling...
-Future Enhancements
-Entity Relationship Management
+```
+
+## Future Enhancements
+
+### Entity Relationship Management
+
 To improve entity consistency and relationship tracking:
+
+```python
 class EntityGraph:
     def __init__(self, uri, user, password):
         self.driver = GraphDatabase.driver(uri, auth=(user, password))
@@ -238,9 +252,13 @@ class EntityGraph:
                 original=original_entity, mapped=mapped_entity, 
                 type=entity_type, domain=domain
             )
+```
 
-Improved Token Management
+### Improved Token Management
+
 To handle long emails more efficiently:
+
+```python
 def optimize_for_token_limit(content, max_tokens=7000):
     # Estimate tokens (rough approximation: 4 chars ≈ 1 token)
     estimated_tokens = len(content) // 4
@@ -273,9 +291,13 @@ def optimize_for_token_limit(content, max_tokens=7000):
                 
         # Combine parts
         return '\n\n'.join(essential_parts + middle_paragraphs + conclusion_parts)
+```
 
-Domain-Specific Enhancement
+### Domain-Specific Enhancement
+
 To improve domain adaptation:
+
+```python
 class DomainSpecificTransformer:
     def __init__(self):
         self.domain_models = {
@@ -302,11 +324,18 @@ class DomainSpecificTransformer:
         
         # Generate text with target domain concepts
         return target_model.generate_with_concepts(content, mapped_concepts)
+```
 
-Conclusion
+## Conclusion
+
 The hybrid approach to synthetic email generation demonstrates the potential for creating high-quality, de-identified datasets that preserve the essential characteristics of business communication while adapting to new contexts. The implementation achieves impressive results with a 1.0 de-identification score, 1.0 Indian context score, 0.81 structure preservation score, and 0.94 overall quality score.
+
 Our synthetic email generation system successfully addresses the core requirements for eDiscovery applications, creating synthetic data that maintains the complexity and variability needed for LLM fine-tuning while ensuring complete privacy protection. The multi-stage pipeline provides a flexible framework that can be extended to accommodate additional domains, languages, and cultural contexts.
+
 One of the key innovations in our approach is the unified entity processing system that ensures consistency between email headers and content. By analyzing the entire email as a single unit for entity detection and maintaining cross-references between different components, we've solved one of the most challenging issues in synthetic email generation - inconsistent entity replacement. This is particularly important for eDiscovery applications where maintaining entity relationships across documents is essential.
+
 The domain distribution in our generated dataset (46% finance, 32% technology, 12% healthcare, 6% agriculture, and 4% education) reflects a realistic cross-section of Indian business communications, ensuring the dataset has broad applicability across industries. This diversity is important for training LLMs that need to understand different business contexts.
+
 While the current implementation has some limitations in terms of API reliability and content length handling, these challenges can be addressed through the proposed enhancements. The future roadmap includes distributed processing architecture, advanced entity relationship management, improved token handling, and domain-specific enhancement that will transform this prototype into a robust, production-ready system.
+
 The project demonstrates the viability of synthetic data as a solution to the challenge of developing AI applications in sensitive domains like eDiscovery, where access to real data is constrained by privacy considerations. By combining traditional NLP techniques with modern LLMs in a carefully designed pipeline, the system achieves a balance of control, quality, and efficiency that would be difficult to attain with either approach alone.
